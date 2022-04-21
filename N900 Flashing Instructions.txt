@@ -1,0 +1,60 @@
+Step 1
+
+* Ensure minimum 50% battery in the device
+* Remove the back cover of n900 to expose the battery.
+* Connect the nokia n900 to the PC while holding down "u" in the n900 keyboard
+* You'll see a usb 2.0 icon on the top right side of the display with a dim display with NOKIA written 
+
+Step 2
+
+* Extract libusb-win32-bin-1.2.6.0
+* Open the bin folder and run inf-wizard as administrator
+* Search in list and select "0x0421 - 0x0105 - Nokia N900 (Update Mode)"
+* Press "Next"
+* Search in list and select "0x0421 - 0x0105 - Nokia N900 (Update Mode)"
+* Press "Next"
+* Press "Next"
+* Save .inf file
+* Press "Install Now"
+* Press "Install this driver software anyway" on warning message.
+* You should get "Installation successful." and press OK.
+
+** Check Windows Device Manager for "libusb-win32 devices", expand and verify "Nokia N900 (Update Mode)" can be found.
+
+Step 3
+
+* Install maemo_flasher-3.5_2.5.2.2
+* Goto the flasher installation folder ("By dafult  C:\Program Files (x86)\maemo\flasher-3.5")
+* Copy RX-51_2009SE_10.2010.13-2.VANILLA_PR_EMMC_MR0_ARM.bin to this location
+* Copy RX-51_2009SE_20.2010.36-2_PR_COMBINED_MR0_ARM.bin to this location (You can use specific COMBINED image. This is the Global Variant)
+* Press Shift and Click Right Button,Then click "Open Powershell Window Here" (for windows 10).
+* Alternatively you can navigate to this folder via cmd with admin previlages.
+* Type .\flasher-3.5.exe -F .\RX-51_2009SE_20.2010.36-2.004_PR_COMBINED_004_ARM.bin -f -R hit enter (Verify that n900 is still connected before hitting enter)
+* Wait for the process to complete.
+* Once completed Remove the battery instantly and then disconnect usb.
+
+Step 4
+
+* Insert the battery
+* Once again connect the n900 to the PC by pressing down "u" and connecting usb. do the verification.
+* Goto the Powershell Window and Type  .\flasher-3.5.exe -F .\RX-51_2009SE_10.2010.13-2.VANILLA_PR_EMMC_MR0_ARM.bin -f and hit enter
+* It'll show waiting for suitable Device and n900 will have a dim screen with the booting dots moving and then stuck. donot disconnect the usb.
+* Goto libusb-win32-bin-1.2.6.0/bin folder.
+* Run inf-wizard
+* Select Nokia N900 (PC Suite Mode)
+* Press "Next"
+* Press "Next"
+* Save .inf file
+* Press "Install Now"
+* Press "Install this driver software anyway" on warning message.
+* You should get "Installation successful." and press OK.
+* Now check the Powershell Window and the Process will be Completed.
+* Your N900 is Flashed Now.
+* Remove the battery and disconnect usb.
+* Insert Battery and Power On !!!! Your N900 is ready to go!
+
+Links
+
+* libusb-win32-bin-1.2.6.0 -- https://sourceforge.net/projects/libusb-win32/
+* Flash Files -- http://web.archive.org/web/20131117073524/http://skeiron.org/tablets-dev/nokia_N900/
+* Flasher -- http://web.archive.org/web/20131117084237/http://skeiron.org/tablets-dev/maemo_dev_env_downloads/
